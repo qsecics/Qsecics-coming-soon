@@ -1,64 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Qsec ics</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Qsecics</title>
+  <meta name="description" content="Qsecics is launching soon. Stay tuned for our brand new website!" />
+  <meta name="keywords" content="Qsecics, coming soon, new website, technology" />
+  <meta name="author" content="Qsecics" />
+  <meta name="google-site-verification" content="3_mUnnnIfGCfsVVyQvcwSyAXcT8xybo2H1wr9Fospdc" />
 
-<!-- Google Search Console verification -->
-<meta name="google-site-verification" content="3_mUnnnIfGCfsVVyQvcwSyAXcT8xybo2H1wr9Fospdc" />
+  <style>
+    /* Reset and base */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #ffffff;
+      background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+    }
 
-<!-- SEO Meta Tags -->
-<meta name="description" content="Qsecics is launching soon. Stay tuned for updates!">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.qsecics.com/">
+    /* Dark overlay for entire page */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.55);
+      z-index: -1;
+    }
 
-<!-- Social Media Sharing -->
-<meta property="og:title" content="Qsecics - Coming Soon">
-<meta property="og:description" content="We're launching soon. Come back later for something awesome!">
-<meta property="og:url" content="https://www.qsecics.com/">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80">
+    /* Layout */
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
-<!-- Styling -->
-<style>
-  * {
-    margin: 0; padding: 0; box-sizing: border-box;
-  }
-  body, html {
-    height: 100%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-  }
-  h1, p {
-    color: white; /* White text */
-    text-shadow: none; /* No shadow */
-  }
-  h1 {
-    font-size: 5rem;
-    margin-bottom: 20px;
-    font-weight: 700;
-  }
-  p {
-    font-size: 2rem;
-    font-weight: 500;
-    font-style: italic;
-  }
-  @media (max-width: 600px) {
-    h1 { font-size: 3rem; }
-    p { font-size: 1.2rem; }
-  }
-</style>
+    /* Header */
+    header {
+      height: 100px; /* increased height */
+      display: flex;
+      align-items: center;
+      padding: 0 40px;
+      user-select: none;
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 10;
+    }
+
+    /* Logo text */
+    .logo {
+      font-weight: 700;
+      font-size: 4rem; /* increased font size */
+      letter-spacing: 0.15em;
+      font-family: 'Courier New', Courier, monospace;
+      /*color: #00C4FF;  brighter cyan for visibility */
+      color: #00809D; /* brighter cyan for visibility */
+      text-shadow: 0 0 8px rgba(0, 196, 255, 0.7); /* subtle glow */
+    }
+
+    /* Main content container */
+    main.container {
+      flex-grow: 1;
+      margin-top: 100px; /* adjusted for larger header */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end; /* start from top */
+      text-align: center;
+      padding: 6rem 1rem 2rem; /* more top padding to push content lower */
+    }
+
+    /* Title */
+    h3 {
+      font-size: 4.5rem; /* slightly larger */
+      font-weight: 900;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.1em;
+      font-family: 'Segoe UI Black', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-transform: uppercase;
+      color: #ffffff; /* pure white */
+      line-height: 1.4;
+      text-shadow: 0 0 12px rgba(0, 0, 0, 0.8), 0 0 8px rgba(255, 255, 255, 0.6);
+    }
+
+    /* Paragraph */
+    p {
+      font-size: 1.6rem;
+      font-weight: 500;
+      max-width: 540px;
+      line-height: 1.8;
+      color: #fefefe; /* very light white */
+      font-style: italic;
+      text-shadow: 0 0 12px rgba(0, 0, 0, 0.8), 0 0 6px rgba(255, 255, 255, 0.5);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header {
+        height: 80px;
+        padding: 0 20px;
+      }
+      .logo {
+        font-size: 5rem;
+      }
+      main.container {
+        margin-top: 80px;
+        padding-top: 4rem;
+      }
+      h3 {
+        font-size: 3rem;
+        line-height: 1.4;
+      }
+      p {
+        font-size: 1.6rem;
+        max-width: 90%;
+        line-height: 1.8;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Qsec ics</h1>
-  <p>We’re launching soon!</p>
+  <header>
+    <div class="logo">QSEC ICS</div>
+  </header>
+
+  <main class="container">
+    <h3>We Are Coming Soon!</h3>
+    <p>Currently, we are working on our brand new website and will be launching soon.</p>
+  </main>
 </body>
 </html>
